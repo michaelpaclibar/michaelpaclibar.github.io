@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include relative-head.html -%}
+
+    <body>
+
+    {%- include relative-header.html -%}
+
+            {{ content }}
+
+    {%- include relative-footer.html -%}
+
+    </body>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/simpleLightbox.min.js"></script>
+<script src="/js/script.js"></script>
+</html>

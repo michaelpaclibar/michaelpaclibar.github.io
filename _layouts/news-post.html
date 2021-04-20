@@ -1,0 +1,41 @@
+---
+layout: post-default
+---
+
+<div class="pagetop">
+	<div class="container">
+		<h1><i>{{page.post-title}}</i> News</h1>
+		<ul class="breadcrumbs">
+			<li><a href="/index.html" title="">Home</a></li>
+			<li><a href="/news.html" title="">News</a></li>
+			<li>{{ page.post-title }}</li>
+		</ul>
+	</div>
+</div>
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-12">
+					<div class="shelter-blog-detail">
+						<div class="post-img"><img src="{{page.post-image}}" alt="" /></div>
+						<div class="post-information">
+							<div class="cat-box"><a href="#" title="">News</a></div>
+							<h1 class="post-title"><a href="#" title="">{{ page.post-title | escape }}</a></h1>
+							<ul class="meta">
+								<li>By <a href="#" title="">{{ page.post-author | default: site.author }}</a></li>
+								<li>{{ page.date | date: "%b %-d, %Y" }}</li>
+							</ul>
+							{%- include socials.html -%}
+						</div>
+						{{ content }}
+					</div><!-- Shelter Blog Detail -->
+
+				</div>
+
+				{%- include urgent-projects-side.html -%}
+			</div>
+		</div>
+	</div>
+</section>

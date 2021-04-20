@@ -1,0 +1,95 @@
+---
+layout: post-default
+title: Schools - Giving $10
+pagination:
+ enabled: true
+ category: schools
+ indexpage: 'schools'
+ permalink: '/page/:num/schools.html'
+---
+
+	<div class="pagetop">
+			<div class="container">
+				<h1><i>In</i> Schools</h1>
+				<ul class="breadcrumbs">
+					<li><a href="/index.html" title="">Home</a></li>
+					<li>Schools</li>
+				</ul>
+			</div>
+		</div>
+
+	<section>
+			<div class="block">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="shelter-blog">
+								<div class="row">
+									{% for post in paginator.posts %}
+									<div class="col-4">
+										<div class="simple-post">
+											<div class="simple-post-img">
+												<a href="{{post.url}}" title=""><img src="{{ post.post-image}}" width="370" height="319"  alt="" /></a>
+											</div>
+											<div class="simple-post-detail">
+												<ul class="meta">
+													<li>{{ post.date | date: "%B %Y" }}</li>
+												</ul>
+												{% if post.pdf-link %}
+												 <h3><a href="{{ post.pdf-link }}" title="">{{ post.post-title }}</a></h3>
+												{% else %}
+												 <h3><a href="{{post.url}}" title="">{{ post.post-title }}</a></h3>
+												{% endif %}
+												<p>{{ post.post-summary }}</p>
+												{% if post.pdf-link %}
+												 <a class="readmore" href="{{ post.pdf-link | relative_url }}" title="{{ post.post-title | escape }}">Read More</a>
+												{% else %}
+												<a class="readmore" href="{{ post.url | relative_url }}" title="{{ post.post-title | escape }}">Read More</a>
+												{% endif %}
+											</div>
+										</div><!-- Simple Post -->
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="row">
+
+								<div class="shelter-pagination">
+									<ul class="pagination">
+										<li>
+											{% if paginator.previous_page %}
+											<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
+											{% else %}
+											<a class="previous">Previous</a>
+											{% endif %}
+										</li>
+										{% for page in (1..paginator.total_pages) %}
+										{% if page == paginator.page %}
+										<li><a class="current">{{ page }}</a></li>
+										{% elsif page == 1 %}
+										<li><a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+										{% else %}
+										<li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+										{% endif %}
+										{% endfor %}
+
+										<li>
+											{% if paginator.next_page %}
+											<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+											{% else %}
+											<a class="next ">Next</a>
+											{% endif %}
+										</li>
+									</ul>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+

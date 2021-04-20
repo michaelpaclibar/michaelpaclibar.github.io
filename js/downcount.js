@@ -106,7 +106,7 @@
 
 $(document).ready(function() {
     $('.countdown').downCount({
-        date: '06/25/2019 12:00:00',
+        date: '06/25/2018 12:00:00',
         offset: +10
     });
 });

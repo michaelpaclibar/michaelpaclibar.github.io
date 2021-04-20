@@ -1,0 +1,113 @@
+---
+layout: default
+title: Volunteers - Giving $10
+---
+
+	<div class="pagetop">
+			<div class="container">
+				<h1><i>VOLUNTEERS</i> PAGE</h1>
+				<ul class="breadcrumbs">
+					<li><a href="index.html" title="">Home</a></li>
+					<li>Volunteers</li>
+				</ul>
+			</div>
+		</div>
+
+	<section>
+			<div class="block">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="become-volunteer">
+								<div class="row">
+									<div class="col-lg-6 col-md-12">
+										<div class="volunteer-thumb">
+											<img src="images/volunteer-img.png" alt=" ">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12">
+										<div class="title left">
+											<span>The world needs you</span>
+											<h2><i>BECOME A</i> VOLUNTEER</h2>
+										</div>
+										<p>Your time, talent and skills can make a real difference in people's lives all around the world.</p>
+										<div>
+											<input id="name" name="name" type="text" placeholder="Name *">
+											<input id="email" name="email" type="text" placeholder="Email Address *">
+											<input id="phone" name="phone" type="text" placeholder="Phone Number *">
+											<textarea id="comments" name="comments" placeholder="About Your Self *"></textarea>
+											<button class="btn submit" id="submit">Volunteer</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/simpleLightbox.min.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		// $(window).load(function(){
+		// 	/*================== Map =====================*/
+		// 	var myLatlng = new google.maps.LatLng(38.918130, -77.072360);
+		// 	var mapOptions ={
+		// 	zoom:14,
+		// 	disableDefaultUI:true,
+		// 	scrollwheel:false,
+		// 	center:myLatlng
+		// 	}
+		// 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		//
+		// 	var image = '';
+		// 	var myLatLng = new google.maps.LatLng(38.918130, -77.072360);
+		// 	var beachMarker = new google.maps.Marker({
+		// 	  position:myLatLng,
+		// 	  map:map,
+		// 	  icon:image
+		// 	});
+		// });
+
+
+		$('#submit').click(function () {
+			console.log('A')
+			let $email = $('#email');
+			let $name = $('#name');
+			let $phone = $('#phone');
+			let $comments = $('#comments');
+
+			let phone = $phone.val()
+			let name = $name.val()
+			let email = $email.val()
+			let message = $comments.val()
+
+			const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			let valid = mailRegex.test(email)
+
+			if(valid) {
+				const data = {email, name, phone, message, type:'volunteer-form'};
+				postToIframe(data ,'https://script.google.com/a/macros/teamextension.com/s/AKfycbzLKQUbAnTrPt2xlHGnNPTGQ8SWdsokJA2KxUrOzdAfK1yvaXH4JfOkVy7crp4iYdriwg/exec','form_iframe')
+
+				$email.val('')
+				$name.val('')
+				$phone.val('')
+				$comments.val('')
+			}
+		})
+
+		function postToIframe(data,url,target){
+			$('body').append('<form action="'+url+'" method="post" target="'+target+'" id="postToIframe"></form>');
+			$.each(data,function(n,v){
+				$('#postToIframe').append('<input type="hidden" name="'+n+'" value="'+v+'" />');
+			});
+			$('#postToIframe').submit().remove();
+		}
+
+	</script>
+	<iframe id="form_iframe" name="form_iframe" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+
+

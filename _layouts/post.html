@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-12">
+					<div class="shelter-blog-detail">
+						<div class="post-img"><img src="http://placehold.it/870x444" alt="" /></div>
+						<div class="post-information">
+							<div class="cat-box"><a href="#" title="">{{ page.type | escape }}</a></div>
+							<h1 class="post-title"><a href="#" title="">{{ page.title | escape }}</a></h1>
+							<ul class="meta">
+								<li>By <a href="#" title="">{{ page.author }}</a></li>
+								<li>{{ page.date | date: date_format }}</li>
+							</ul>
+							{%- include socials.html -%}
+						</div>
+						{{ content }}
+					</div><!-- Shelter Blog Detail -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

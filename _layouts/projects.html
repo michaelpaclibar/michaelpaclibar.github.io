@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include relative-head.html -%}
+
+<body>
+
+{%- include relative-header.html -%}
+
+{% assign p = paginator.posts.first %}
+<div class="pagetop">
+    <div class="container">
+        <h1>{{ p.project-year }} <i>Poverty Alleviation Projects</i></h1>
+        <ul class="breadcrumbs">
+            <li><a href="projects.html" title="">Home</a></li>
+            <li>{{ p.project-year }} Projects</li>
+        </ul>
+    </div>
+</div>
+<section>
+    <div class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {%- include project-year-pagination.html -%}
+
+                    <div class="creative-causes">
+                        <div class="row">
+                            {% for post in paginator.posts %}
+                            <div class="col-4">
+                                <div class="creative-cause">
+                                    <div class="cre-cause-img">
+                                        <img src="{{ post.post-image }}" width="370" height="319" alt=""/>
+                                        <span><i>{{ post.project-donation-amount }}</i> {{ post.project-month }} {{ post.project-year }}</span>
+                                        <a class="btn" href="donate.html" title="">Donate Now</a>
+                                    </div>
+                                    <div class="cause-loc"><span>{{ post.project-cause }}</span> <span>{{ post.project-location }}</span>
+                                    </div>
+                                    <h3><a href="{{ post.url }}" title="">{{ post.post-title }}</a></h3>
+                                    <p>{{post.post-summary}} <a href="{{ post.url }}">Read more.</a></p>
+                                    <p>For more information: <a href="{{ post.post-more-info-url }}">{{ post.post-more-info-url | remove: "http://" }}</a></p>
+                                </div><!-- Creative Cause -->
+                            </div>
+                            {% endfor %}
+                        </div><!-- Creative Causes -->
+
+                        <!-- Pagination -  only show if more than 1 page -->
+                        {% if paginator.total_pages > 1 %}
+                        <div class="row">
+
+                            <div class="shelter-pagination">
+                                <ul class="pagination">
+                                    <li>
+                                        {% if paginator.previous_page %}
+                                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
+                                        {% else %}
+                                        <a class="previous">Previous</a>
+                                        {% endif %}
+                                    </li>
+                                    {% for page in (1..paginator.total_pages) %}
+                                    {% if page == paginator.page %}
+                                    <li><a class="current">{{ page }}</a></li>
+                                    {% elsif page == 1 %}
+                                    <li><a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                                    {% else %}
+                                    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                                    {% endif %}
+                                    {% endfor %}
+
+                                    <li>
+                                        {% if paginator.next_page %}
+                                        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+                                        {% else %}
+                                        <a class="next ">Next</a>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+                            <!--
+                              Showing buttons to move to the next and to the previous list of posts (pager buttons).
+                            -->
+                        </div>
+                        {% endif %}
+
+                        {%- include project-year-pagination.html -%}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%- include relative-footer.html -%}
+
+</body>
+
+</html>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/simpleLightbox.min.js"></script>
+<script src="/js/script.js"></script>

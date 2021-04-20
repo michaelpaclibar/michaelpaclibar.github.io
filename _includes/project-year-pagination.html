@@ -1,0 +1,12 @@
+<div class="shelter-pagination">
+    <p>{{include.test}}</p>
+    <ul class="pagination">
+        {% for project in site.data.projects %}
+        {% if project.url == page.url %}
+        <li><a class="current" href="{{ project.url }}">{{project.year}}</a></li>
+        {% else %}
+        <li><a href="{{project.url}}">{{project.year}}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div><!-- Shelter Pagination -->

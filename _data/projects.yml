@@ -1,0 +1,13 @@
+# Used in project-year-pagination.html
+
+- name: projects
+  url: /projects.html
+  year: 2012
+
+- name: projects-2011
+  url: /projects-2011.html
+  year: 2011
+
+- name: projects-2010
+  url: /projects-2010.html
+  year: 2010

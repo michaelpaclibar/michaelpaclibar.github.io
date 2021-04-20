@@ -133,29 +133,6 @@ $(window).on("load", function() {
 
 
 
-    /*=================== Sticky Header ===================*/
-    if($('header').hasClass('stick')){
-        $('header').after('<div class="header-height"></div>');
-        $('.header-height').css({'height':$('header').height()})
-    }
-    if($('header').hasClass('transparent')){
-        $('.header-height').css({'height':'0'})
-    }
-
-
-    $(window).on("scroll",function(){
-        var scroll = $(window).scrollTop();
-        var hstick = $("header");
-        if (scroll > 20){
-            hstick.addClass("sticky");
-        } else{
-            hstick.removeClass("sticky");
-        }
-
-    });
-
-
-
     /* =============== Popup ===================== */
     $(".open-popup").on("click",function(){
         $(".popup").addClass("active");

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+{%- include header.html -%}
+
+<div class="pagetop">
+    <div class="container">
+        <h1>{{page.year}} <i>Project Photos</i></h1>
+        <ul class="breadcrumbs">
+            <li><a href="index.html" title="">Home</a></li>
+            <li>{{page.year}} Photos</li>
+        </ul>
+    </div>
+</div>
+<section>
+    <div class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {%- include photo-year-pagination.html -%}
+
+                    {{ content }}
+
+                    {%- include photo-year-pagination.html -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%- include footer.html -%}
+
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/simpleLightbox.min.js"></script>
+<script src="js/script.js"></script>

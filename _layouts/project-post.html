@@ -1,0 +1,47 @@
+---
+layout: post-default
+---
+
+<div class="pagetop">
+	<div class="container">
+		<h1><i>{{page.project-month}}</i> {{page.project-year}}</h1>
+		<ul class="breadcrumbs">
+			<li><a href="/index.html" title="">Home</a></li>
+			<li><a href="/{{page.project-home-page}}" title="">{{ page.project-year }} Projects</a></li>
+			<li>{{ page.post-title }}</li>
+		</ul>
+	</div>
+</div>
+
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-12">
+					<div class="shelter-blog-detail cause-detail">
+						<div class="cre-cause-img">
+							<img src="{{page.post-image}}" width="870" height="444" alt="" />
+							<span><i>{{page.project-donation-amount}}</i> {{page.project-date}}</span>
+							<a class="btn style3" href="/donate.html" title="">Donate Now</a>
+						</div>
+						<div class="post-information">
+							<div class="cat-box">{{page.project-cause}}</div>
+							<h1 class="post-title">{{page.post-title}}</h1>
+							<ul class="meta">
+								<li>By {{ page.post-author | default: site.author }}</li>
+								<li>{{page.project-date}}</li>
+							</ul>
+							{%- include socials.html -%}
+						</div>
+						{{ page.content }}
+
+					</div><!-- Shelter Blog Detail -->
+
+				</div>
+				{%- include urgent-projects-side.html -%}
+			</div>
+		</div>
+	</div>
+</section>
+

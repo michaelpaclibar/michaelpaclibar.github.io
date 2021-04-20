@@ -2,7 +2,6 @@
 Template Name: Shelter Charity HTML Template
 Author: Stillidea
 Author URI: https://themeforest.net/user/stillidea
-Description: 
 Version: 1.0
 
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -219,28 +218,28 @@ section{
     box-shadow:0 0 7px rgba(0,0,0,0.2) inset;
 }
 .fixed-bg.stop{background-attachment:scroll!important}
-.bg1{background-image:url(../images/resource/parallax1.jpg)}
-.bg2{background-image:url(../images/resource/parallax2.jpg)}
-.bg3{background-image:url(../images/resource/parallax3.jpg)}
-.bg4{background-image:url(../images/resource/parallax4.jpg)}
-.bg5{background-image:url(../images/resource/parallax5.jpg)}
-.bg6{background-image:url(../images/resource/parallax6.jpg)}
-.bg7{background-image:url(../images/resource/parallax7.jpg);background-position:bottom}
-.bg8{background-image:url(../images/resource/parallax8.jpg)}
-.bg9{background-image:url(../images/resource/parallax9.jpg)}
-.bg10{background-image:url(../images/resource/parallax10.jpg)}
-.bg11{background-image:url(../images/resource/parallax11.jpg)}
-.bg12{background-image:url(../images/resource/parallax12.jpg)}
-.bg13{background-image:url(../images/resource/parallax13.jpg)}
-.bg14{background-image:url(../images/resource/parallax14.jpg)}
-.bg15{background-image:url(../images/resource/parallax15.jpg)}
-.bg16{background-image:url(../images/resource/parallax16.jpg)}
-.bg17{background-image:url(../images/resource/parallax17.jpg)}
-.bg18{background-image:url(../images/resource/parallax18.jpg)}
-.bg19{background-image:url(../images/resource/parallax19.jpg)}
-.bg20{background-image:url(../images/resource/parallax20.jpg)}
-.bg21{background-image:url(../images/resource/parallax21.jpg)}
-.bg22{background-image:url(../images/resource/parallax22.jpg)}
+.bg1{background-image:url(http://placehold.it/1600x900)}
+.bg2{background-image:url(http://placehold.it/1600x900)}
+.bg3{background-image:url(http://placehold.it/1600x900)}
+.bg4{background-image:url(http://placehold.it/1600x900)}
+.bg5{background-image:url(http://placehold.it/1600x900)}
+.bg6{background-image:url(../images/giving-10-hero.jpg)}
+.bg7{background-image:url(http://placehold.it/1600x900);background-position:bottom}
+.bg8{background-image:url(http://placehold.it/1600x900)}
+.bg9{background-image:url(http://placehold.it/1600x900)}
+.bg10{background-image:url(http://placehold.it/1600x900)}
+.bg11{background-image:url(http://placehold.it/1600x900)}
+.bg12{background-image:url(http://placehold.it/1600x900)}
+.bg13{background-image:url(http://placehold.it/1600x900)}
+.bg14{background-image:url(http://placehold.it/1600x900)}
+.bg15{background-image:url(http://placehold.it/1600x900)}
+.bg16{background-image:url(http://placehold.it/1600x900)}
+.bg17{background-image:url(http://placehold.it/1600x900)}
+.bg18{background-image:url(http://placehold.it/1600x900)}
+.bg19{background-image:url(http://placehold.it/1600x900)}
+.bg20{background-image:url(http://placehold.it/1600x900)}
+.bg21{background-image:url(http://placehold.it/1600x900)}
+.bg22{background-image:url(http://placehold.it/1600x900)}
 .pattern{background-image:url(../images/pattern.jpg)}
 .blackish:before, .whitish:before, .half-gray:before,
 .coloured:before{
@@ -353,11 +352,7 @@ a,
 .donation-box,
 .social-links,
 .contact-name,
-nav ul ul,
-.menubar,
-.topbar,
-.menubar.fancy .logo,
-header.transparent{
+nav ul ul{
     -webkit-transition:all 0.4s ease-in-out;
     -moz-transition:all 0.4s ease-in-out;
     -ms-transition:all 0.4s ease-in-out;
@@ -380,11 +375,9 @@ ul li:before,
     border-radius:50%;
 }
 /*=============== Header ===================*/
-header {
-    position: relative;
-    z-index: 10;
-    float: left;
-    width: 100%;
+header{
+    position:relative;
+    z-index:10;
 }
 .topbar{
   float:left;
@@ -891,34 +884,6 @@ nav ul ul li:hover > a{color:#FFF}
     background:black;
     color:#FFF;
     margin-left:10px;
-}
-/*=============== Sticky Header ===================*/
-.header-height{
-    float:left;
-    width:100%
-}
-header.stick{
-    position:fixed;
-    left:0;
-    top:0;
-}
-header.stick.sticky {
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.16);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.16);
-    box-shadow: 0 0 10px rgba(0,0,0,0.16);
-}
-header.sticky .menubar{padding:5px 70px}
-header.sticky .topbar{padding:7px 70px}
-header.sticky .menubar.fancy .logo{
-  -webkit-transform: translate(-20px,-20px);
-  -moz-transform: translate(-20px,-20px);
-  transform: translate(-20px,-20px);
-}
-header.sticky .menu-strip nav ul li a{padding:7px 15px}
-header.sticky .menu-strip .shelter-search{padding:7px 0}
-header.transparent.sticky {
-    padding: 10px 30px;
-    background: rgba(20,20,20,0.95);
 }
 /*=============== Shelter Image Carousel ===================*/
 .shelter-featured-carousel{
@@ -1698,7 +1663,7 @@ header.transparent.sticky {
 
 /*=============== Shelter Donations ===================*/
 .shelter-donations{
-    background:url(../images/resource/donations-bg.png) no-repeat scroll right 0 #2e2e2e;
+    background:url(http://placehold.it/600x342) no-repeat scroll right 0 #2e2e2e;
         background-size:auto auto;
     float:left;
     width:100%;
@@ -1813,7 +1778,7 @@ header.transparent.sticky {
     width:100%;
     border:10px solid #FFF;
     border-bottom:0;
-    background:url(../images/resource/join-bg.png) no-repeat;
+    background:url(http://placehold.it/370x476) no-repeat;
     background-size:cover;
     padding:55px 25px;
     position:relative;
@@ -2915,7 +2880,7 @@ header.transparent.sticky {
 .shelter-pagination{
     float:left;
     width:100%;
-    margin:80px 0 0;
+    /*margin:80px 0 0;*/
     text-align:center;
 }
 .shelter-pagination ul.pagination{
@@ -2934,25 +2899,16 @@ header.transparent.sticky {
     font-size:14px;
     color:#000;
     width:auto;
-    width:38px;
     height:38px;
-    line-height:36px;
-    padding:0;
+    line-height:38px;
+    padding:0 20px;
     text-align:center;
     -webkit-border-radius:30px;
     -moz-border-radius:30px;
     -ms-border-radius:30px;
     -o-border-radius:30px;
     border-radius:30px;
-}
-.shelter-pagination ul.pagination li:first-child a, 
-.shelter-pagination ul.pagination li:last-child a{
-    width:auto;
-    padding:0 20px;
-    font-size:13px;
-    text-transform:uppercase;
     font-weight:600;
-    line-height:38px;
 }
 .shelter-pagination ul.pagination li a.current{color:#FFF}
 
@@ -2960,7 +2916,7 @@ header.transparent.sticky {
 .pagetop{
     float:left;
     width:100%;
-    background:url(../images/resource/pagetop.jpg) no-repeat scroll 0 0 / cover transparent;
+    background:url(../images/pagetop.jpg) no-repeat scroll 0 0 / cover transparent;
     padding-top:110px;
     text-align:center;
     padding-bottom:110px;
@@ -3921,7 +3877,7 @@ ul.donation-figures li:before{display:none}
 }
 
 .become-volunteer{
-    background:url(../images/resource/volunteer-bg.jpg) repeat scroll 0 0 / cover;
+    background:url(http://placehold.it/1170x872) repeat scroll 0 0 / cover;
     border-radius:2px;
     float:left;
     padding:90px 70px;

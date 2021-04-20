@@ -1,0 +1,51 @@
+---
+layout: post-default
+---
+
+<div class="pagetop">
+    <div class="container">
+        <h1><i>{{page.post-title}}</i>School</h1>
+        <ul class="breadcrumbs">
+            <li><a href="/index.html" title="">Home</a></li>
+            <li><a href="/schools.html" title="">Schools</a></li>
+            <li>{{ page.post-title }}</li>
+        </ul>
+    </div>
+</div>
+
+
+<section>
+    <div class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <div class="shelter-blog-detail cause-detail">
+                        <div class="cre-cause-img">
+                            <img src="{{ page.post-image}}" width="870" height="444"
+                                 alt=""/>
+                            <span><i>?</i></span>
+                            <a class="btn style3" href="/donate.html" title="">Donate Now</a>
+                        </div>
+                        <div class="post-information">
+                            <div class="cat-box">Schools</div>
+                            <h1 class="post-title">{{ page.post-title }}</h1>
+                            {%- include socials.html -%}
+                        </div>
+
+                        {{ content }}
+                    </div><!-- Shelter Blog Detail -->
+
+                </div>
+
+                {%- include urgent-projects-side.html -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/script.js"></script>
+
+
